@@ -1,0 +1,21 @@
+class Subsequences 
+{
+	public static void main(String[] args) 
+	{
+       subSequences("xyz");
+	}
+	public static void subSequences(String s ,String output)
+	{
+		if (s.length()==0)
+		{
+			System.out.println(output);
+			return ;
+		}
+        subSequences(s.subString(1),output);
+		subSequences(s.subString(1),output+s.charAt(0));
+	}
+	public static void subSequences(String s )
+	{
+		subSequences(s,"");
+	}
+}
